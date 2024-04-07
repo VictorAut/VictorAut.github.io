@@ -7,13 +7,6 @@ on:
             - "cv.tex"
             - "index.html"
             - ".github/workflows/**"
-    pull_request:
-        branches:
-            - "main"
-        paths:
-            - "cv.tex"
-            - "index.html"
-            - ".github/workflows/**"
 
 jobs:
     build_latex:
