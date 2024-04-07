@@ -34,7 +34,7 @@ jobs:
                   cp index.html build/
                   
             - name: Git add
-              run: git add cv.pdf
+              run: git add build/ #cv.pdf
               
             - name: Deploy to GitHub Pages
               uses: JamesIves/github-pages-deploy-action@4.1.4
