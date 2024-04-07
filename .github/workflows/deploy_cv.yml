@@ -20,7 +20,7 @@ jobs:
                   persist-credentials: false
 
             - name: Compile LaTeX document
-              uses: xu-cheng/latex-action@v2
+              uses: xu-cheng/latex-action@v3
               with:
                   root_file: cv.tex
 
