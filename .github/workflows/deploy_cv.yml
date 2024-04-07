@@ -1,4 +1,4 @@
-name: Compile and upload résumé PDF
+name: Compile and upload CV PDF
 on:
     push:
         branches:
