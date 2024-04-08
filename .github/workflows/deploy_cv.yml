@@ -22,8 +22,13 @@ jobs:
               with:
                   persist-credentials: false
 
+            # - name: build document class
+            #   run : | 
+            #       apt-get install texlive-xetex
+            #       xelatex limecv.ins
+
             - name: Compile LaTeX document
-              uses: xu-cheng/latex-action@v2
+              uses: xu-cheng/latex-action@v3
               with:
                   root_file: cv.tex
 
