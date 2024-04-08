@@ -36,7 +36,7 @@ jobs:
             - name: Git add
               run: git add build/
               
-            - name: Deploy to GitHub Pages
+            - name: Deploy to GitHub Pages branch
               uses: JamesIves/github-pages-deploy-action@4.1.4
               with:
                   BRANCH: gh-pages
