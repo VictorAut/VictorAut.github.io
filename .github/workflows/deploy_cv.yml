@@ -1,4 +1,4 @@
-name: Compile and upload CV PDF
+name: CI
 on:
     push:
         branches:
