@@ -1,66 +1,92 @@
-\documentclass{article}
-
-\begin{document}
-
-\title{Your Name}
-\author{}
-\date{}
-
-\maketitle
-
-\section{Introduction}
-Replace this text with your introduction. blah bleep blep
-
-\section{Education}
-Replace this text with your educational background.
-
-\section{Experience}
-Replace this text with your work experience.
-
-\section{Skills}
-Replace this text with your skills.
-
-\section{Projects}
-Replace this text with your projects or achievements.
-
-\section{Conclusion}
-Replace this text with any concluding remarks.
-
-\end{document}
-
-% \documentclass{limecv}
+% \documentclass{article}
 
 % \begin{document}
 
-% \cvname{John Doe} % Your name
-% \cvjobtitle{Software Engineer} % Job title/career
+% \title{Your Name}
+% \author{}
+% \date{}
 
-% \cvdate{Born 1990} % Date of birth
-% \cvaddress{123 Street, City, Country} % Short address/location, use \newline if more than 1 line is required
-% \cvnumberphone{+123 456 7890} % Phone number
-% \cvsite{www.example.com} % Personal website
-% \cvmail{john@example.com} % Email address
+% \maketitle
 
-% \aboutme{A brief description about yourself. VICTOR}
-
-% \skills{{C++, Python, Java}/{Git, Docker, Kubernetes}/{HTML, CSS, JavaScript}/{LaTeX, Vim, VS Code}}
-
-% \makeprofile % Print profile sidebar
+% \section{Introduction}
+% Replace this text with your introduction. blah bleep blep
 
 % \section{Education}
-% \cveducation{2010--2014}{B.Sc in Computer Science}{University Name}{GPA: 3.8/4.0}
+% Replace this text with your educational background.
 
 % \section{Experience}
-% \cvexperience{2015--Present}{Software Engineer}{Company Name}{Description of job responsibilities and achievements goes here.}
+% Replace this text with your work experience.
+
+% \section{Skills}
+% Replace this text with your skills.
 
 % \section{Projects}
-% \begin{itemize}
-%     \item Project 1: Description of project 1
-%     \item Project 2: Description of project 2
-% \end{itemize}
+% Replace this text with your projects or achievements.
 
-% \section{Languages}
-% \cvskill{English}{5} % Skill rating out of 5
-% \cvskill{Spanish}{4}
+% \section{Conclusion}
+% Replace this text with any concluding remarks.
 
 % \end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awesome Resume/CV
+% XeLaTeX Template
+% Version 1.4 (2021-10-27)
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.5cm, top=1.5cm, right=1.5cm, bottom=1.5cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+\definecolor{darktext}{HTML}{414141}
+\definecolor{text}{HTML}{333333}
+\definecolor{graytext}{HTML}{5D5D5D}
+\definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% Define your custom cv information
+\name{John}{Doe}
+\position{Data Engineer}
+\address{123 Street, City, Country}
+\mobile{(+1) 123-456-7890}
+\email{john@example.com}
+\homepage{www.example.com}
+\github{john-doe}
+\linkedin{john-doe}
+\quote{``A quote or a brief summary of yourself."}
+
+\begin{document}
+
+% Print the header with personal information
+\makecvheader
+
+% Print the content
+\input{sections/summary.tex}
+\input{sections/experience.tex}
+\input{sections/education.tex}
+\input{sections/skills.tex}
+\input{sections/honors.tex}
+
+\end{document}

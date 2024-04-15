@@ -28,7 +28,7 @@ jobs:
             #       xelatex limecv.ins
 
             - name: Compile LaTeX document
-              uses: xu-cheng/latex-action@v3
+              uses: xu-cheng/latex-action@v2
               with:
                   root_file: cv.tex
                   # latexmk_use_xelatex: true
