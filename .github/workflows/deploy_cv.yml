@@ -17,7 +17,6 @@ jobs:
             - name: Change Owner of Container Working Directory
               run: chown root:root .
 
-            # testing this currently
             - name: Install fontawesome5 package
               run: |
                 apt-get update && apt-get install -y --no-install-recommends \
