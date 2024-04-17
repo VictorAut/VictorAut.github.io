@@ -1,4 +1,4 @@
-name: CI
+name: Compile latex 
 on:
     push:
         branches:
@@ -25,7 +25,7 @@ jobs:
             - name: Install Fira Fonts
               run: |
                 mkdir -p ~/.fonts
-                ls -l
+                pwd
                 cp ~/fonts/* ~/.fonts
                 fc-cache -fv
           
