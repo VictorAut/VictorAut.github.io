@@ -26,7 +26,7 @@ jobs:
               run: |
                 mkdir -p ~/.fonts
                 pwd
-                cp ~/fonts/* ~/.fonts
+                cp /__w/VictorAut.github.io/VictorAut.github.io/fonts/* ~/.fonts
                 fc-cache -fv
           
 
