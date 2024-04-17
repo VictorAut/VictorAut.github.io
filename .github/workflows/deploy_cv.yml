@@ -25,6 +25,7 @@ jobs:
             - name: Install Fira Fonts
               run: |
                 mkdir -p ~/.fonts
+                ls -l
                 cp ~/fonts/* ~/.fonts
                 fc-cache -fv
           
