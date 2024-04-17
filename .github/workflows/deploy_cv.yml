@@ -25,10 +25,8 @@ jobs:
             - name: Install Fira Fonts
               run: |
                 mkdir -p ~/.fonts
-                pwd
-                cp /__w/VictorAut.github.io/VictorAut.github.io/fonts/* ~/.fonts
+                cp fonts/* ~/.fonts
                 fc-cache -fv
-          
 
             - name: Checkout
               uses: actions/checkout@v4
