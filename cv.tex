@@ -19,28 +19,26 @@
     
     \begin{cvContact}
       \cvContactAddress{4 Brinkworth Way\\E9 5JX London}
-      \cvContactEmail{mailto:john@doe.tld}{john@doe.tld}
-      \cvContactPhone{+1 781 555 1212}
-      \cvContactWebsite{https://doe.tld}{doe.tld}
-      \cvContactLinkedin{https://www.linkedin.com/in/johndoe/}{johndoe}
-      \cvContactTwitter{https://twitter.com/johndoe}{@johndoe}
-      \cvContactKeybase{https://keybase.io/johndoe}{\texttt{AAAA 5555 BBBB FFFF}}
+      \cvContactEmail{mailto:victor.autonell@hotmail.com}{victor.autonell@hotmail.com}
+      \cvContactPhone{07784825070}
+      \cvContactLinkedin{https://www.linkedin.com/in/victor-autonell/}{victor-autonell}
+      \cvContactGithub{https://github.com/VictorAut}{VictorAut}
     \end{cvContact}
     
     \begin{cvLanguages}
-      \cvLanguage{English (native)}{5}
-      \cvLanguage{German (B2)}{3}
-      \cvLanguage{Spanish}{3}
+      \cvLanguage{English}{5}
+      \cvLanguage{French}{4.8}
+      \cvLanguage{Catalan}{4.8}
+      \cvLanguage{Spanish}{4.5}
     \end{cvLanguages}
     
     \begin{cvInterests}[short]
       \cvInterestsPersonal
-      \cvInterest{\faTrain}{model trains}
-      \cvInterest{\faGamepad}{gaming}
-      \cvInterest{\faSuitcase}{travelling}
+      \cvInterest{\faMountain}{climbing}
+      \cvInterest{\faHammer}{DIY}
+      \cvInterest{\faLeaf}{gardening}
       \cvInterestsProfessional
-      \cvInterest{\faFilm}{film}
-      \cvInterest{\faCamera}{photography}
+      \cvInterest{\faDatabase}{databases}
     \end{cvInterests}
     
     % \begin{cvProjects}
@@ -51,47 +49,63 @@
 
   \begin{cvMainContent}
 
+  \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$} %change bullet size for experience
+
+    \begin{cvExperience}
+      \cvItem{Data Engineer\\
+        \textsc{\selectfont Profusion}, \textit{London}. \hfill \textsc{Sep} 2021 -- \textit{present}\\
+        \begin{itemize}
+        % \setlength\itemsep{-1.2em}
+        \item Developed ELT pipelines making extensive use of ECR, Docker, Python \& Pandas, Athena, SQL and Github Actions
+        \item Packaged python wrappers of commenly available python packages to expand their use cases within particular scenarios
+        \item Built a fully automated testing pipeline, executed in dockerised containers to measure parity of semantic layer tables against benchmarked results
+        \item Lead the technical scoping of the company's largest project worth £2 million over two years
+        \item Built and deployed an automotive client's client uplift model using k-fold cross-validation grid search techniques
+        \item Developed single customer views for a number of clients
+        \item Graphed a client's customer service use as a metric of branch loyalisation
+        \end{itemize}};
+      \cvItem{Lead Data Mentor\\
+        \textsc{\selectfont Decoded}, \textit{London}. \hfill \textsc{Jul} 2019 -- \textsc{Jun} 2021\\
+        \begin{itemize}
+        % \setlength\itemsep{-1.2em}
+        \item Delivered advanced Data Science sessions to a variety of professionals from finanical institutions, retailers and energy providers
+        \item Consulted on client's internal data science projects
+        \item Line managed a team of data mentors
+        \end{itemize}};
+      \cvItem{Technical Business Analyst\\
+        \textsc{\selectfont Kluster Intelligence}, \textit{London}. \hfill \textsc{Aug} 2018 -- \textsc{Jun} 2019\\
+        \begin{itemize}
+        % \setlength\itemsep{-1.2em}
+        \item Solved complex queries to report on sales funnels of various clients
+        \item Dashboarded above reports into actionable units of business intelligence 
+        \item Engaging with clients to understand their reporting needs
+        \end{itemize}};
+    \end{cvExperience}
+
     \begin{cvEducation}
-      \cvItem{Evening class: Chinese\\
-      Some School, City. September 2015 -- June 2016\\
-      Achieved A2 language skill in Chinese (Mandarin).}
-      \cvItem{Bachelor of Science in Biochemistry and Biotechnology\\
-      University, City. September 2009 -- June 2012\\
-      General training in the basic sciences and the molecular life science.}
-      \cvItem{Master of Science in Biochemistry and Biotechnology\\
-      University, City. September 2012 -- June 2015\\
-      Acquisition of insight into and knowledge of possibilities for application in the area of biochemistry and biotechnology, specific with applications in biomedical application and due problem-solving reasoning skills.}
+      \cvItem{Durham University, \textit{UK} \hfill \textsc{Sep} 2013 -- \textsc{Jun} 2017\\
+      Masters in Physics (MPhys), 1\textsuperscript{st}\\
+      Thesis: numerical modelling of small-scale processes in simulated galaxies to inform future observational studies.}
+      \cvItem{British School of Barcelona, \textit{Spain} \hfill \textsc{Sep} 2011 -- \textsc{Jun} 2013\\
+      A levels: 3A* and 3A in STEM subjects}
     \end{cvEducation}
     
-    \begin{cvExperience}
-      \cvItem{Student Job\\
-              \textsc{\selectfont Company X}, Location X. Summer 2010\\
-              Integer tincidunt dapibus consectetur. Nullam tristique aliquam luctus. Sed ut ante velit. Nulla pharetra maximus lacus at elementum. Suspendisse sodales consectetur metus, sit amet ultricies ipsum ultrices ut.};
-      \cvItem{Internship\\
-              \textsc{Company Y}, Location Y. June 2012 -- August 2012\\
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus. Fusce lacinia dolor et metus gravida pulvinar sit amet et ex.};
-      \cvItem{Internship\\
-              \textsc{Company Z}, Location Z. August 2014 -- September 2014\\
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.};
-    \end{cvExperience}
-    
     \begin{cvSkills}
-      \cvSkillTwo{5}{MATLAB}{5}{\LaTeX}
-      \cvSkillTwo{4}{Python}{4}{VHDL}
-      \cvSkillTwo{4}{Microsoft Office}{4}{macOS}
-      \cvSkillTwo{3}{C, C++}{1}{Javascript}
-      \cvSkillTwo{3}{HTML5/CSS}{3}{Bash}
+      \cvSkillTwo{5}{Python}{5}{SQL}
+      \cvSkillTwo{3}{Terraform}{3}{Bash}
+      \cvSkillTwo{2}{\LaTeX}{1}{Javascript}
     \end{cvSkills}
   
     \begin{cvReferences}
-      \cvAddReference{%
-        name=Jane Smith,
-        company=Company ABC Co.\ Ltd.,
-        position=Job title,
-        address line 1=Street lane 2,
-        address line 2=B-1150 Brussels,
-        mobile phone=+1 781 555 1212,
-        email=john\_doe@company.com}%
+      Available on request for any of the above professional positions.
+      % \cvAddReference{%
+      %   name=Jane Smith,
+      %   company=Company ABC Co.\ Ltd.,
+      %   position=Job title,
+      %   address line 1=Street lane 2,
+      %   address line 2=B-1150 Brussels,
+      %   mobile phone=+1 781 555 1212,
+      %   email=john\_doe@company.com}%
     \end{cvReferences}
   
   \end{cvMainContent}
