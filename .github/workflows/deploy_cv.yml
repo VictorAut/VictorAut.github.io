@@ -17,15 +17,16 @@ jobs:
             - name: Change Owner of Container Working Directory
               run: chown root:root .
 
+            # testing this currently
+            - name: Install fontawesome5 package
+              run: |
+                apt-get update && apt-get install -y --no-install-recommends \
+                  texlive-fonts-extra
+
             - name: Checkout
               uses: actions/checkout@v4
               with:
                   persist-credentials: false
-
-            # - name: build document class
-            #   run : | 
-            #       apt-get install texlive-xetex
-            #       xelatex limecv.ins
 
             - name: Compile LaTeX document
               uses: xu-cheng/latex-action@v2
