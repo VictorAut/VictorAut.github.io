@@ -1,67 +1,99 @@
-% \documentclass{article}
+\documentclass[a4paper]{limecv}
+  
+  % Defaults used in template design.
+  \usepackage[margin=\cvMargin,noheadfoot]{geometry}
+  \cvSetLanguage{english}
+  
+  % For cover letter.
+  \usepackage{lipsum}
+  
+  \begin{document}
+  
+  % Design of side bar.
+  \begin{cvSidebar}
+    \cvID{Victor}{Autonell-Oiry}{}{Data Engineer}
+  
+    \begin{cvProfile}
+      A brief intro about myself and my motivations
+    \end{cvProfile}
+    
+    \begin{cvContact}
+      \cvContactAddress{4 Brinkworth Way\\E9 5JX London}
+      \cvContactEmail{mailto:john@doe.tld}{john@doe.tld}
+      \cvContactPhone{+1 781 555 1212}
+      \cvContactWebsite{https://doe.tld}{doe.tld}
+      \cvContactLinkedin{https://www.linkedin.com/in/johndoe/}{johndoe}
+      \cvContactTwitter{https://twitter.com/johndoe}{@johndoe}
+      \cvContactKeybase{https://keybase.io/johndoe}{\texttt{AAAA 5555 BBBB FFFF}}
+    \end{cvContact}
+    
+    \begin{cvLanguages}
+      \cvLanguage{English (native)}{5}
+      \cvLanguage{German (B2)}{3}
+      \cvLanguage{Spanish}{3}
+    \end{cvLanguages}
+    
+    \begin{cvInterests}[short]
+      \cvInterestsPersonal
+      \cvInterest{\faTrain}{model trains}
+      \cvInterest{\faGamepad}{gaming}
+      \cvInterest{\faSuitcase}{travelling}
+      \cvInterestsProfessional
+      \cvInterest{\faFilm}{film}
+      \cvInterest{\faCamera}{photography}
+    \end{cvInterests}
+    
+    % \begin{cvProjects}
+    %   \cvProject[image=limecv-icon,width=1cm,link=https://github.com/opieters/limecv]{\texttt{limecv}}{A \LaTeX\ CV document class.}
+    % \end{cvProjects}
+    
+  \end{cvSidebar}
 
-% \begin{document}
+  \begin{cvMainContent}
 
-% \title{Your Name}
-% \author{}
-% \date{}
-
-% \maketitle
-
-% \section{Introduction}
-% Replace this text with your introduction. blah bleep blep
-
-% \section{Education}
-% Replace this text with your educational background.
-
-% \section{Experience}
-% Replace this text with your work experience.
-
-% \section{Skills}
-% Replace this text with your skills.
-
-% \section{Projects}
-% Replace this text with your projects or achievements.
-
-% \section{Conclusion}
-% Replace this text with any concluding remarks.
-
-% \end{document}
-
-\documentclass{limecv}
-
-\begin{document}
-
-\title{Your Name}
-\profilepic{example-image-a} % Profile picture
-
-\begin{cv}
-\makerow{\makecell{{\LARGE Your Name}}} % Full name
-
-\makerow{\faEnvelope\ \texttt{email@example.com}} % Email
-\makerow{\faMapMarker\ Address, City} % Address
-\makerow{\faPhone\ Phone Number} % Phone number
-\makerow{\faLink\ \url{www.example.com}} % Website
-\makerow{\faGithub\ \href{https://github.com/yourusername}{github.com/yourusername}} % GitHub
-
-\section{Education}
-\cvevent{Degree}{University}{Year}{Description}
-
-\section{Experience}
-\cvevent{Position}{Company}{Date}{Description}
-
-\section{Skills}
-\cvtag{Skill 1}
-\cvtag{Skill 2}
-\cvtag{Skill 3}
-% Add more skills as needed
-
-\section{Languages}
-\cvtag{Language 1}
-\cvtag{Language 2}
-\cvtag{Language 3}
-% Add more languages as needed
-
-\end{cv}
-
-\end{document}
+    \begin{cvEducation}
+      \cvItem{Evening class: Chinese\\
+      Some School, City. September 2015 -- June 2016\\
+      Achieved A2 language skill in Chinese (Mandarin).}
+      \cvItem{Bachelor of Science in Biochemistry and Biotechnology\\
+      University, City. September 2009 -- June 2012\\
+      General training in the basic sciences and the molecular life science.}
+      \cvItem{Master of Science in Biochemistry and Biotechnology\\
+      University, City. September 2012 -- June 2015\\
+      Acquisition of insight into and knowledge of possibilities for application in the area of biochemistry and biotechnology, specific with applications in biomedical application and due problem-solving reasoning skills.}
+    \end{cvEducation}
+    
+    \begin{cvExperience}
+      \cvItem{Student Job\\
+              \textsc{\selectfont Company X}, Location X. Summer 2010\\
+              Integer tincidunt dapibus consectetur. Nullam tristique aliquam luctus. Sed ut ante velit. Nulla pharetra maximus lacus at elementum. Suspendisse sodales consectetur metus, sit amet ultricies ipsum ultrices ut.};
+      \cvItem{Internship\\
+              \textsc{Company Y}, Location Y. June 2012 -- August 2012\\
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus. Fusce lacinia dolor et metus gravida pulvinar sit amet et ex.};
+      \cvItem{Internship\\
+              \textsc{Company Z}, Location Z. August 2014 -- September 2014\\
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.};
+    \end{cvExperience}
+    
+    \begin{cvSkills}
+      \cvSkillTwo{5}{MATLAB}{5}{\LaTeX}
+      \cvSkillTwo{4}{Python}{4}{VHDL}
+      \cvSkillTwo{4}{Microsoft Office}{4}{macOS}
+      \cvSkillTwo{3}{C, C++}{1}{Javascript}
+      \cvSkillTwo{3}{HTML5/CSS}{3}{Bash}
+    \end{cvSkills}
+  
+    \begin{cvReferences}
+      \cvAddReference{%
+        name=Jane Smith,
+        company=Company ABC Co.\ Ltd.,
+        position=Job title,
+        address line 1=Street lane 2,
+        address line 2=B-1150 Brussels,
+        mobile phone=+1 781 555 1212,
+        email=john\_doe@company.com}%
+    \end{cvReferences}
+  
+  \end{cvMainContent}
+  
+  \end{document}
