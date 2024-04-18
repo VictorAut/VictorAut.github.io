@@ -22,16 +22,16 @@ jobs:
                 apt-get update && apt-get install -y --no-install-recommends \
                   texlive-fonts-extra
 
-            - name: Install Fira Fonts
-              run: |
-                mkdir -p ~/.fonts
-                cp fonts/* ~/.fonts
-                fc-cache -fv
-
             - name: Checkout
               uses: actions/checkout@v4
               with:
                   persist-credentials: false
+
+            - name: Install Fira Fonts
+              run: |
+                mkdir -p ~/.fonts
+                cp fonts/* ~/.fonts
+                fc-cache -fv                  
 
             - name: Compile LaTeX document
               uses: xu-cheng/latex-action@v2
