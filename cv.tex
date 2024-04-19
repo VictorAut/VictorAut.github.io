@@ -6,25 +6,29 @@
   
   % For cover letter.
   \usepackage{lipsum}
+
+  % Use this to hyperlink
+  \usepackage{hyperref}  
   
   \begin{document}
   
   % Design of side bar.
   \begin{cvSidebar}
    
-    \cvID{Victor}{Autonell-Oiry}{}{Data Engineer}
+    \cvID{\textbf{Victor}}{\textbf{Autonell-Oiry}}{}{Data Engineer}
   
     \begin{cvProfile}
-      TODO write about myself TODO write about myself TODO write about myself
-      TODO write about myself TODO write about myself TODO write about myself
-      TODO write about myself TODO write about myself TODO write about myself
-      TODO write about myself TODO write about myself TODO write about myself
+      \begin{flushleft}
+      I'm a highly motivated Data Engineer whose abilities tend into traditional software/DevOps. Whilst I'm therefore aware of
+      general good programming paradigms, my real skill comes from my skills in analytics, reflecting my prior background as an analyst and Data Scientist, which I have applied widely in my work. I'm seeking
+      a role that encompasses the above — one where I can border a number of disciplines, whilst being centred on rigorous data engineering.
+      \end{flushleft}
     \end{cvProfile}
     
     \begin{cvContact}
       \cvContactAddress{4 Brinkworth Way\\E9 5JX London}
       \cvContactEmail{mailto:victor.autonell@hotmail.com}{victor.autonell@hotmail.com}
-      \cvContactPhone{07784825070}
+      \cvContactPhone{07784 825070}
       \cvContactLinkedin{https://www.linkedin.com/in/victor-autonell/}{victor-autonell}
       \cvContactGithub{https://github.com/VictorAut}{VictorAut}
     \end{cvContact}
@@ -56,33 +60,38 @@
   \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$} %change bullet size for experience
 
     \begin{cvExperience}
-      \cvItem{\textbf{Data Engineer}\\
-        \textsc{\selectfont Profusion}, \textit{London}. \hfill \textsc{Sep} 2021 -- \textit{present}\\
+      \cvItem{\href{https://profusion.com/}{\textbf{Profusion}}\\
+        \textbf{Data Engineer}\\ 
+        \textit{London, UK} \hfill \textsc{Sep} 2021 -- \textit{present}\\
+        \vspace{0.3cm}
         \begin{itemize}
-        % \setlength\itemsep{-1.2em}
         \item Developed ELT pipelines making extensive use of ECR, Docker, Python \& Pandas, Athena, SQL and Github Actions
         \item Packaged python wrappers of commenly available python packages to expand their use cases within particular scenarios
         \item Built a fully automated testing pipeline, executed in dockerised containers to measure parity of semantic layer tables against benchmarked results
-        \item Lead the technical scoping of the company's largest project worth £2 million over two years
+        \item Lead the technical scoping of the company's largest project worth \mbox{£2 million} over two years
         \item Built and deployed an automotive client's client uplift model using k-fold cross-validation grid search techniques
         \item Developed single customer views for a number of clients
         \item Graphed a client's customer service use as a metric of branch loyalisation
         \end{itemize}};
-      \cvItem{\textbf{Lead Data Mentor}\\
-        \textsc{\selectfont Decoded}, \textit{London}. \hfill \textsc{Jul} 2019 -- \textsc{Jun} 2021\\
+      \cvItem{\href{https://decoded.com/}{\textbf{Decoded}}\\
+        \textbf{Lead Data Mentor}\\ 
+        \textit{London, UK}, \hfill \textsc{Jul} 2019 -- \textsc{Jun} 2021\\
+        \vspace{0.3cm}
         \begin{itemize}
-        % \setlength\itemsep{-1.2em}
-        \item Delivered advanced Data Science sessions to a variety of professionals from finanical institutions, retailers and energy providers
+        \item Delivered Data Science programming sessions to professionals from finanical institutions, retailers and energy providers
         \item Consulted on client's internal data science projects
         \item Line managed a team of data mentors
         \end{itemize}};
-      \cvItem{\textbf{Technical Business Analyst}\\
-        \textsc{\selectfont Kluster Intelligence}, \textit{London}. \hfill \textsc{Aug} 2018 -- \textsc{Jun} 2019\\
+      \cvItem{\href{https://www.kluster.com/}{\textbf{Kluster Intelligence}}\\
+        \textbf{Data Analyst}\\
+        \textit{London, UK}, \hfill \textsc{Aug} 2018 -- \textsc{Jun} 2019\\
+        \vspace{0.3cm}
         \begin{itemize}
         % \setlength\itemsep{-1.2em}
         \item Solved complex queries to report on sales funnels of various clients
-        \item Dashboarded above reports into actionable units of business intelligence 
-        \item Engaging with clients to understand their reporting needs
+        \item Built and maintained an analytics library
+        \item Built automation processes to improve company scalability
+        \item Reduced product demo deployment for prospective clients from 1 day to 1 hour 
         \end{itemize}};
     \end{cvExperience}
 
@@ -97,12 +106,13 @@
     \begin{cvSkills}
 
       \cvSkillTwo{5}{Python}{5}{SQL}
-      \cvSkillTwo{4}{Git}{4}{AWS}
+      \cvSkillTwo{4}{AWS}{4}{Git}
       \cvSkillTwo{3}{Terraform}{3}{Bash}
-      \cvSkillTwo{3}{DBT}{2}{\LaTeX}
-      \cvSkillOne{1}{Javascript}
+      \cvSkillTwo{3}{DBT}{3}{Spark}
+      \cvSkillTwo{3}{Docker}{3}{CICD}
+      \cvSkillTwo{2}{\LaTeX}{1}{JavaScript}
 
-      DevOps/Frameworks
+      \mbox{DevOps/Frameworks}
       
 
     \end{cvSkills}

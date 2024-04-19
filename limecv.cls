@@ -53,6 +53,8 @@
 \definecolor{cvDark}{HTML}{2F3142}
 \definecolor{cvAccent}{HTML}{474A65}
 \definecolor{cvBackground}{HTML}{FFFFFF}
+\definecolor{victorBlueLight}{HTML}{D6EAF8}
+\definecolor{victorBlue}{HTML}{2874A6}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\%
 \arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\%
@@ -149,7 +151,7 @@
     minimum height=\cvProgressAreaHeight,
     rectangle,
     draw=cvBackground,
-    cvGreen,
+    victorBlue,
     progressArea
   },
   cv@progressBar/.style={%
@@ -157,7 +159,7 @@
     rectangle,
     draw,
     fill,
-    cvGreen,
+    victorBlue,
     anchor=west,
     progressBar
   },
@@ -235,7 +237,7 @@
 \newlength\cvStartEndSep
 \setlength\cvStartEndSep{0.3cm}
 \newlength\cvItemSep
-\setlength\cvItemSep{0.4cm}
+\setlength\cvItemSep{0.6cm}
 \newlength\cvTableSepWidth
 \setlength\cvTableSepWidth{0.3cm}
 \newlength\cvCoverLetterHeight
@@ -292,7 +294,7 @@
     \my@repeat@count\m@ne}%
   \endgroup
 }
-\NewDocumentCommand{\cvhrulefill}{}{{\color{cvGreen}%
+\NewDocumentCommand{\cvhrulefill}{}{{\color{victorBlue}%
 \leavevmode\leaders\hrule height \cvSBSectionLineWidth\hfill\kern\z@}}
 \NewDocumentCommand{\ruleline}{m}{\par\noindent\raisebox{.6ex}{%
 \makebox[\linewidth]{\cvhrulefill\hspace{1ex}%
@@ -326,7 +328,7 @@
       (cv@title \the\value{cv@titleNext} dummy) {%
         \phantom{\cvSection{Education}}};
     \begin{scope}[on background layer]
-      \draw[line width=\cvTitleLineWidth,cvGreen]
+      \draw[line width=\cvTitleLineWidth,victorBlue]
         let \p1=(cv@title \the\value{cv@titleNext} %
                 dummy.south west),
             \p2=(current page.east) in
@@ -346,7 +348,7 @@
       (cv@title \the\value{cv@titleNext} dummy) {%
         \phantom{\cvSection{Education}}};
     \begin{scope}[on background layer]
-      \draw[line width=\cvTitleLineWidth,cvGreen]
+      \draw[line width=\cvTitleLineWidth,victorBlue]
         let \p1=(cv@title \the\value{cv@titleNext} %
                 dummy.south west),
             \p2=(current page.east) in
@@ -773,10 +775,10 @@
   }%
 }
 \NewDocumentEnvironment{cvSidebar}{}{%
-  \vspace*{\fill}
-  \vspace*{-0.5\cvMargin}
+  % \vspace*{\fill}       % victor commented out these two lines such that the contents of side bar is flushed up
+  % \vspace*{-0.5\cvMargin}
   \begin{tikzpicture}[remember picture,overlay]
-    \fill[cvGreenLight] (current page.north west) rectangle %
+    \fill[victorBlueLight] (current page.north west) rectangle %
       ++(\cvSideWidth+2\cvMargin,-\paperheight);
   \end{tikzpicture}%
   \begin{minipage}{\cvSideWidth}
@@ -906,7 +908,7 @@
     \ifcv@interestContent
       \vspace*{2\cvSectionSBSep}
     \fi
-    {\color{cvGreen}---} ##1 {\color{cvGreen}---}\\
+    {\color{victorBlue}---} ##1 {\color{victorBlue}---}\\
     \vspace*{\cvSectionSBSep}
     \cv@interestOpen
   }
@@ -1221,7 +1223,7 @@
     \y};
 
     \begin{scope}[on background layer]
-      \draw[line width=\cvCoverLetterLineWidth,cvGreen]
+      \draw[line width=\cvCoverLetterLineWidth,victorBlue]
          ($(cv cover letter name.south west)+(0,-\cvCoverLetterLineSpacing)$) to
          ($(cv cover letter name.south east)+(0,-\cvCoverLetterLineSpacing)$);
     \end{scope}
@@ -1255,15 +1257,18 @@
         {};
     \end{tikzpicture}\\
   }
-  {\LARGE
-  \vspace{\cvIDNameSep}
-  \color{cvAccent} #1
-  \vspace{\cvIDNameSep}
-  \color{cvAccent} #2}
+  \begin{flushleft}
+    {\LARGE
+    \vspace{\cvIDNameSep}
+    \color{cvAccent} #1
+    \vspace{\cvIDNameSep}
+    \vspace{0.3cm} %allows last name to flow to next line
+    \color{cvAccent} #2}
 
-  \vspace{\cvPositionSep}
+    \vspace{\cvPositionSep}
 
-  \@IfNoValueOrEmptyTF{#4}{}{\color{cvAccent} #4}
+    {\large \@IfNoValueOrEmptyTF{#4}{}{\color{cvAccent} #4}}
+  \end{flushleft}
 
   \vspace{\cvPositionSep}
   {\globaldefs=1\relax\pgfkeys{/@cv/info/first name = %
