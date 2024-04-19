@@ -223,7 +223,7 @@
 \newlength\cvColSep
 \setlength\cvColSep{1cm} % 2 times column separation!
 \newlength\cvNodeSep
-\setlength\cvNodeSep{0.75cm}
+\setlength\cvNodeSep{0.5cm}
 \newlength\cvTimeDotDiameter
 \setlength\cvTimeDotDiameter{3pt}
 \newlength\cvMargin
@@ -254,6 +254,8 @@
 \setlength\cvSectionSep{0.6cm}
 \newlength\cvSectionSBSep
 \setlength\cvSectionSBSep{4pt}
+\newlength\cvSectionSBSepVictor % new separation
+\setlength\cvSectionSBSepVictor{25pt}
 \newlength\cvTitleLineWidth
 \setlength\cvTitleLineWidth{2pt}
 \newlength\cvTitleLineSpacing
@@ -265,7 +267,7 @@
 \newlength\cvInterestDetailsSep
 \setlength\cvInterestDetailsSep{4pt}
 \newlength\cvContactItemSep
-\setlength\cvContactItemSep{5pt}
+\setlength\cvContactItemSep{7pt} %{5pt}
 \newlength\cvCoverLetterLineWidth
 \setlength\cvCoverLetterLineWidth{3pt}
 \newlength\cvCoverLetterPositionSpacing
@@ -804,7 +806,8 @@
   \vspace*{\fill}
 }
 \NewDocumentEnvironment{cvProfile}{}{%
-  \vspace{\cvSectionSBSep}
+  % \vspace{\cvSectionSBSep}
+  \vspace{\cvSectionSBSepVictor}
   \ruleline{\pgfkeysvalueof{/@cv/names/profile}}
 }{%
 }
@@ -838,7 +841,7 @@
 \NewDocumentEnvironment{cvContact}{}{%
   \vspace{\cvSectionSBSep}
   % \ruleline{\pgfkeysvalueof{/@cv/names/contact}}% 
-  \vspace{\cvSectionSBSep}
+  % \vspace{\cvSectionSBSep}
 
   \global\cv@contactfirstfalse
   \cv@ContactTemplate{\cvContactAddress}{\faMapMarker}
@@ -980,7 +983,7 @@
     \cv@definecvInterestShort
   \fi
   %%%%%%
-  \vspace{\cvSectionSBSep}
+  \vspace{\cvSectionSBSepVictor} %\vspace{\cvSectionSBSep}
   \ruleline{\pgfkeysvalueof{/@cv/names/interests}}%
   \vspace{\cvSectionSBSep}
 }{%
@@ -1102,7 +1105,7 @@
     }%
     \cv@languageratingfalse
   }
-  \vspace{\cvSectionSBSep}
+  \vspace{\cvSectionSBSepVictor} %\vspace{\cvSectionSBSep}
   \ruleline{\pgfkeysvalueof{/@cv/names/languages}}%
   \vspace{\cvSectionSBSep}
   \begin{tikzpicture}[%
