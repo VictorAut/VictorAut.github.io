@@ -28,7 +28,7 @@
 \cv@fontPathfalse
 \DeclareStringOption{path}
 \AddToKeyvalOption*{path}{\cv@fontPathtrue}
-\DeclareStringOption[Fira Sans]{sansfont}
+\DeclareStringOption[Fira Sans Light]{sansfont} % Victor: Changed to Light
 \DeclareStringOption[Fira Mono]{monofont}
 \ProcessKeyvalOptions*
 \DeclareOption*{%
@@ -837,7 +837,7 @@
 \newif\ifcv@contactfirst
 \NewDocumentEnvironment{cvContact}{}{%
   \vspace{\cvSectionSBSep}
-  \ruleline{\pgfkeysvalueof{/@cv/names/contact}}%
+  % \ruleline{\pgfkeysvalueof{/@cv/names/contact}}% 
   \vspace{\cvSectionSBSep}
 
   \global\cv@contactfirstfalse
@@ -1258,7 +1258,7 @@
     \end{tikzpicture}\\
   }
   \begin{flushleft}
-    {\LARGE
+    {\huge % was LARGE
     \vspace{\cvIDNameSep}
     \color{cvAccent} #1
     \vspace{\cvIDNameSep}
