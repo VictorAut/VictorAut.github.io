@@ -1,5 +1,5 @@
 # VictorAut.github.io
-My github pages hosted CV. Just so that I don't have to worry about who-got-what-version and that way I never need to do something like **my_cv-cleaned-2.1-new-version2_updated.pdf** ever again. Nice.
+My github pages hosted CV. Just so that I don't have to worry about who-got-what-version and that way I never need to do something like **my_cv-cleaned-2.1-new-version2_updated.pdf** ever again.
 
 This CV is based on the [lime-cv template](https://github.com/opieters/limecv), which provides a `limecv.cls` class file for typesetting a CV. In this CV, the `limecv.cls` is slightly modified to accomodate my needs. It is therefore _different_ to original template file.
 
@@ -8,7 +8,7 @@ Fork this repo, or download the folders in the `main` branch as a zip.
 
 If you're like me, you'll want to develop this locally and introduce tools in a step-wise manner in order to introduce each component.
 
-As this website is actually hosted by github pages, I have created a CICD pipeline that will deploy the website, from a `gh-pages` branch upon pushing to `main`. As such, a good starting point to understand how to develop this locally is to have a look at the [github action workflow](/VictorAut.github.io/.github/workflows/deploy_cv.yml)
+As this website is actually hosted by github pages, I have created a CI/CD pipeline that will deploy the website, from a `gh-pages` branch upon pushing to `main`. As such, a good starting point to understand how to develop this locally is to have a look at the [github action workflow](/main/.github/workflows/deploy_cv.yml)
 
 **Caveat:** This is a linux based guide to installation
 
@@ -24,7 +24,8 @@ $ pdflatex cv.tex
 
 3. To render the fonts as provided in the repo and defined the .cls file, you'll have to use the xelatex engine instead, which is installed and executed like this:
 ```
-$ apt-get install texlive-xelatex && xelatex cv.tex
+$ apt-get install texlive-xetex 
+$ xelatex cv.tex
 ```
 
 4. Any further installation needs can be addressed by replicating the steps in the [github action workflow](/VictorAut.github.io/.github/workflows/deploy_cv.yml)
