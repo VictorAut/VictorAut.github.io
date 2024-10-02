@@ -16,7 +16,7 @@
 
     % cls has line removed
     \begin{cvContact}
-      \cvContactAddress{4 Brinkworth Way\\E9 5JX London}
+      \cvContactAddress{London}
       \cvContactEmail{mailto:victor.autonell@hotmail.com}{victor.autonell@hotmail.com}
       \cvContactPhone{07784 825070}
       \cvContactLinkedin{https://www.linkedin.com/in/victor-autonell/}{victor-autonell}
@@ -25,31 +25,40 @@
   
     \begin{cvProfile}
       \begin{flushleft}
-      I'm a highly motivated Data Engineer who loves a challenge. In my last six years, I have developed a number of abilities and have concrete experience in Data Engineering, with which I'm able to include
-      a flare for analytics and Data Science, as well as being well aware of good programming paradigms. I'm seeking
-      a role that encompasses the above — one where I can border a number of disciplines and join a large multi-disciplinary team, whilst being centred on rigorous data engineering.
+      I'm a highly motivated Data Engineer who loves a challenge. My experience ranges from a product startup,
+      to EdTech and consulting with roles both managing and as an individual contributor, all within the Data space.
+      As a full-stack data engineer, I have experience working on long running, complex technical 
+      projects. I enjoy developing advanced solutions in Python, pushing the limits of my knowledge and finding ways of 
+      communicating that to a wide breadth of audiences. I'm looking to join a large multi-disciplinary team 
+      centred around rigorous engineering.
       \end{flushleft}
     \end{cvProfile}
-    
+
+    \begin{cvEducationSide}
+      \begin{flushleft}
+      \textbf{Durham University}, \textit{UK}\\
+      \vspace{0.1cm}
+      2013 -- 2017\\
+      \vspace{0.1cm} 
+      Masters in Physics (MPhys), 1\textsuperscript{st}\\
+      \vspace{0.1cm} 
+      Focused on small-scale hydrodynamic simulations using python and numpy
+
+      \vspace{0.3cm} 
+      \textbf{British School of Barcelona}, \textit{Spain}\\
+      \vspace{0.1cm}
+      2011 -- 2013\\
+      \vspace{0.1cm}
+      A levels: 3A* and 3A
+      \end{flushleft}
+    \end{cvEducationSide}
+
     \begin{cvLanguages}
       \cvLanguage{English}{5}
-      \cvLanguage{French}{4.6}
-      \cvLanguage{Catalan}{4.6}
-      \cvLanguage{Spanish}{4.3}
+      \cvLanguage{French}{5}
+      \cvLanguage{Catalan}{5}
+      \cvLanguage{Spanish}{4}
     \end{cvLanguages}
-    
-    \begin{cvInterests}[short]
-      \cvInterestsProfessional
-      \cvInterest{\faDatabase}{LLMs}
-      \cvInterestsPersonal
-      \cvInterest{\faHammer}{DIY}
-      \cvInterest{\faLeaf}{gardening}
-      \cvInterest{\faMountain}{climbing}
-    \end{cvInterests}
-    
-    % \begin{cvProjects}
-    %   \cvProject[image=limecv-icon,width=1cm,link=https://github.com/opieters/limecv]{\texttt{limecv}}{A \LaTeX\ CV document class.}
-    % \end{cvProjects}
     
   \end{cvSidebar}
 
@@ -58,61 +67,72 @@
   \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$} %change bullet size for experience
 
     \begin{cvExperience}
-      \cvItem{\href{https://profusion.com/}{\textbf{Profusion}} \hfill \textsc{Sep} 2021 -- \textit{present}\\
+      \cvItem{\href{https://profusion.com/}{\textit{Profusion}} \hfill \textsc{Sep} 2021 -- \textit{present}\\
         \textbf{Data Engineer}\\ 
-        % \textit{London, UK} \hfill \textsc{Sep} 2021 -- \textit{present}\\
         \vspace{0.3cm}
         \begin{itemize}
-        \item Developed and maintained reliable ELT pipelines for large, scalable data platforms, ingesting multiple data sources and making extensive use of Glue, ECR, Batch, Docker, Python \& Pandas, Athena, SQL and Github Actions
-        \item Wrote python wrappers for commenly available python package functionality to expand their use cases tailored to specific technical scenarios
-        \item Maintained up-to-date methodologies as a standard in collaboration with the team; including software engineering best practices, agile methodologies, coding standards, code reviews, and testing
-        \item Built a custom, automated QA pipeline, executed in dockerised containers to measure accuracy and assess degradation of semantic layer tables against bench marked results
-        \item Lead the technical scoping of the company's largest project worth \mbox{£2 million} over two years
-        \item Built and deployed a client's causal model to target promotional campaigns using k-fold cross-validation grid search techniques, resulting in a 15\% reduction in marketing costs to "Lost Cause" customers
-        \item Developed single customer views for a number of clients, resulting in datasets that underpin machine learning models
+        \item Delivered, as part of a team of 6 engineers a bespoke AWS-based data platform for a government client, consolidating 20+
+              data sources and hundreds of transformation pipelines to enable reporting and machine learning needs
+        \item Contributed to platform infrastructure development in Terraform, created ingestions and transformation
+              pipelines, built CI/CD pipelines, as well as wrote entire Python packages for tailored client needs
+        \item Maintained up-to-date methodologies as a standard in collaboration with the team; 
+              including software engineering best practices, agile methodologies, coding standards, 
+              code reviews, and testing
+        \item Lead the technical scoping of the a project worth \mbox{£1.4 million} over one 
+              year, with a  40\% gross margin — achieved by closely working both our commercial director
+              and client stakeholders
+        \item Created several ML solutions including building and deploying a client's causal model 
+              to target promotional campaigns using k-fold cross-validation grid search techniques, 
+              resulting in a 15\% reduction in marketing costs to "Lost Cause" customers; as well as developing
+              single customer views for a number of clients, customer lifetime value models, propensity models
+              and customer segmentations
         \end{itemize}
         };
-      \cvItem{\href{https://decoded.com/}{\textbf{Decoded}} \hfill \textsc{Jul} 2019 -- \textsc{Jun} 2021\\
+      \cvItem{\href{https://decoded.com/}{\textit{Decoded}} \hfill \textsc{Jul} 2019 -- \textsc{Jun} 2021\\
         \textbf{Lead Data Mentor}\\ 
-        % \textit{London, UK} \hfill \textsc{Jul} 2019 -- \textsc{Jun} 2021\\
         \vspace{0.3cm}
         \begin{itemize}
-        \item Delivered Data Science programming sessions to professionals from finanical institutions, retailers and energy providers
-        \item Consulted on client's internal data science projects
-        \item Line managed a team of data mentors
+        \item Delivered regular one-to-one Data Science/programming sessions to over 50 professionals 
+              from the finanical, retailers and energy sectors including adivsing on their internal 
+              data science projects
+        \item Line managed a team of 4 data mentors
         \end{itemize}};
-      \cvItem{\href{https://www.kluster.com/}{\textbf{Kluster Intelligence}} \hfill \textsc{Aug} 2018 -- \textsc{Jun} 2019\\
+      \cvItem{\href{https://www.kluster.com/}{\textit{Kluster Intelligence}} \hfill \textsc{Aug} 2018 -- \textsc{Jun} 2019\\
         \textbf{Data Analyst}\\
-        % \textit{London, UK} \hfill \textsc{Aug} 2018 -- \textsc{Jun} 2019\\
         \vspace{0.3cm}
         \begin{itemize}
-        % \setlength\itemsep{-1.2em}
-        \item Built and maintained an analytics library
-        \item Built automation processes to improve company scalability
-        \item Reduced product demo deployment for prospective clients from 1 day to 1 hour 
+        \item Built and maintained a library of stored procedures for sales pipeline analytics
+        \item Automated product demo deployment for prospective clients from 1 day to 1 hour 
         \end{itemize}};
     \end{cvExperience}
 
-    
-    \begin{cvSkills}
+    \begin{cvSkillsVictor}
+      \cvItem{\textbf{Data Engineering} - Python (Pandas, PySpark), SQL, DBT};
+      \cvItem{\textbf{Data Architecture} - Data modelling, data warehouses/lakes, governance, integrations};
+      \cvItem{\textbf{Cloud} - AWS (Redshift, Athena, Glue, Lake Formation, Batch, Sagemaker)};
+      \cvItem{\textbf{Machine Learning} - Sklearn, recommender systems, NLP, MLOps, causal modelling};
+      \cvItem{\textbf{Misc} - Terraform, Docker, Git, Github Actions, Bash};
+    \end{cvSkillsVictor}
 
-      \cvSkillTwo{5}{Python}{5}{SQL}
-      \cvSkillTwo{4}{AWS}{4}{Git}
-      \cvSkillTwo{3}{Terraform}{3}{Bash}
-      \cvSkillTwo{3}{dbt}{3}{Spark}
-      \cvSkillTwo{3}{Docker}{3}{CI/CD}
-      % \cvSkillTwo{2}{\LaTeX}{1}{JavaScript}      
+    % \begin{cvSkills}
 
-    \end{cvSkills}
+    %   \cvSkillTwo{5}{Python}{5}{SQL}
+    %   \cvSkillTwo{4}{AWS}{4}{Git}
+    %   \cvSkillTwo{3}{Terraform}{3}{Bash}
+    %   \cvSkillTwo{3}{dbt}{3}{Spark}
+    %   \cvSkillTwo{3}{Docker}{3}{CI/CD}
+    %   \cvSkillTwo{2}{\LaTeX}{1}{JavaScript}      
 
-    \begin{cvEducation}
-      \cvItem{\textbf{Durham University}, \textit{UK} \hfill 2013 -- 2017\\ 
-      Masters in Physics (MPhys), 1\textsuperscript{st}\\
-      % Thesis: numerical modelling of small-scale processes in simulated galaxies to inform future observational studies.
-      }
-      \cvItem{\textbf{British School of Barcelona}, \textit{Spain} \hfill 2011 -- 2013\\
-      A levels: 3A* and 3A}
-    \end{cvEducation}
+    % \end{cvSkills}
+
+    % \begin{cvEducation}
+    %   \cvItem{\textbf{Durham University}, \textit{UK} \hfill 2013 -- 2017\\ 
+    %   Masters in Physics (MPhys), 1\textsuperscript{st}\\
+    %   % Thesis: numerical modelling of small-scale processes in simulated galaxies to inform future observational studies.
+    %   }
+    %   \cvItem{\textbf{British School of Barcelona}, \textit{Spain} \hfill 2011 -- 2013\\
+    %   A levels: 3A* and 3A}
+    % \end{cvEducation}
   
     % \begin{cvReferences}
     %   Available on request for any of the above professional positions.

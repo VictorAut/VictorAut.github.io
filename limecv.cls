@@ -116,19 +116,19 @@
     anchor=north west,
     eventdottext,
   },
-  cv@invisibletimedot/.style = {%
-    circle,
-    minimum width=\cvTimeDotDiameter,
-    anchor=center,
-    invisibletimedot,
-  },
-  cv@timedot/.style = {%
-    cv@invisibletimedot,
-    draw,
-    fill,
-    black,
-    timedot,
-  },
+  % cv@invisibletimedot/.style = {%
+  %   circle,
+  %   minimum width=\cvTimeDotDiameter,
+  %   anchor=center,
+  %   invisibletimedot,
+  % },
+  % cv@timedot/.style = {%
+  %   cv@invisibletimedot,
+  %   draw,
+  %   fill,
+  %   black,
+  %   timedot,
+  % },
   cv@contactIcon/.style={%
     minimum height=\baselineskip,
     contactIcon,
@@ -229,7 +229,7 @@
 \newlength\cvMargin
 \setlength\cvMargin{1cm}
 \newlength\cvSideWidth
-\setlength\cvSideWidth{0.3\paperwidth-\cvMargin}
+\setlength\cvSideWidth{0.35\paperwidth-\cvMargin}
 \newlength\cvMainWidth
 \setlength\cvMainWidth{\paperwidth-4\cvMargin-\cvSideWidth}
 \newlength\cvTimeDotSep
@@ -360,14 +360,15 @@
 \stepcounter{cv@titlePrev}%
 \stepcounter{cv@titleNext}
 }
-\NewDocumentCommand{\cv@EndSectionDraw}{}{
-  \draw (start) to (end.center);}
+% \NewDocumentCommand{\cv@EndSectionDraw}{}{
+%   \draw (start) to (end.center);}
 \newcounter{cv@itemPrev}
 \setcounter{cv@itemPrev}{0}
 \newcounter{cv@itemNext}
 \setcounter{cv@itemNext}{1}
 \newcounter{cv@lastItem}
 \setcounter{cv@lastItem}{1}
+
 \NewDocumentCommand{\cv@definecvItem}{}{
   \NewDocumentCommand{\cvItem}{m}{%
     \ifnodedefined{item \the\value{cv@itemPrev}}{%
@@ -383,11 +384,11 @@
         cv@sectionEduText]
         (item \the\value{cv@itemNext})
         {##1};
-      \node[%
-        left=\cvTimeDotSep of item %
-          \the\value{cv@itemNext} header,
-        cv@timedot]
-        {};
+      % \node[%
+      %   left=\cvTimeDotSep of item %
+      %     \the\value{cv@itemNext} header,
+      %   cv@timedot]
+      %   {};
     }{
       \node[%
         below=\cvItemSep of cv@title %
@@ -401,23 +402,24 @@
         cv@sectionEduText]
         (item \the\value{cv@itemNext})
         {##1};
-      \node[
-        left=\cvTimeDotSep of item %
-          \the\value{cv@itemNext} header,
-        cv@timedot]
-        (start)
-        {};
+      % \node[
+      %   left=\cvTimeDotSep of item %
+      %     \the\value{cv@itemNext} header,
+      %   cv@timedot]
+      %   (start)
+      %   {};
     }
-    \node[
-      left=\cvTimeDotSep of item %
-        \the\value{cv@itemNext}.south west,
-      cv@invisibletimedot]
-      (end)
-      {};
+    % \node[
+    %   left=\cvTimeDotSep of item %
+    %     \the\value{cv@itemNext}.south west,
+    %   cv@invisibletimedot]
+    %   (end)
+    %   {};
     \stepcounter{cv@itemPrev}
     \stepcounter{cv@itemNext}
   }
 }
+
 \pgfkeys{/@cv/names/.is family,
          /@cv/names/.unknown/.style = %
          {\pgfkeyscurrentpath/\pgfkeyscurrentname/%
@@ -601,14 +603,19 @@
     \stepcounter{cv@itemNext}
     \cv@definecvItem
   }{%
-    \cv@EndSectionDraw
+    % \cv@EndSectionDraw
     \stepcounter{cv@lastItem}
     \draw (item \the\value{cv@itemPrev}.south west)
       node (cv@last item \the\value{cv@lastItem}) {};
   }
 }
+
+
 \cvList{cvEducation}{education}{\faGraduationCap}
 \cvList{cvExperience}{experience}{\faBriefcase}
+\cvList{cvSkillsVictor}{skills}{\faStar} % Victor
+
+
 \NewDocumentEnvironment{cvSkills}{}{%
   \cv@Title{\pgfkeysvalueof{/@cv/names/skills}}{\faStar}
   \global\cv@firstskilltrue
@@ -809,6 +816,12 @@
   % \vspace{\cvSectionSBSep}
   \vspace{\cvSectionSBSepVictor}
   \ruleline{\pgfkeysvalueof{/@cv/names/profile}}
+}{%
+}
+\NewDocumentEnvironment{cvEducationSide}{}{%
+  % \vspace{\cvSectionSBSep}
+  \vspace{\cvSectionSBSepVictor}
+  \ruleline{\pgfkeysvalueof{/@cv/names/education}}
 }{%
 }
 \NewDocumentCommand{\cv@ContactTemplate}{mm}{
