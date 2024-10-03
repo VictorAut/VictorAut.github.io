@@ -818,12 +818,20 @@
   \ruleline{\pgfkeysvalueof{/@cv/names/profile}}
 }{%
 }
-\NewDocumentEnvironment{cvEducationSide}{}{%
+\NewDocumentEnvironment{cvEducationSide}{}{% Victor made
   % \vspace{\cvSectionSBSep}
   \vspace{\cvSectionSBSepVictor}
   \ruleline{\pgfkeysvalueof{/@cv/names/education}}
 }{%
 }
+
+\NewDocumentEnvironment{cvCertifications}{}{% Victor made
+  % \vspace{\cvSectionSBSep}
+  \vspace{\cvSectionSBSepVictor}
+  \ruleline{Certifications}
+}{%
+}
+
 \NewDocumentCommand{\cv@ContactTemplate}{mm}{
   \NewDocumentCommand{#1}{m}{
       \ifcv@contactfirst \\ \else %
