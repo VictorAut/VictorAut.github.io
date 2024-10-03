@@ -229,7 +229,7 @@
 \newlength\cvMargin
 \setlength\cvMargin{1cm}
 \newlength\cvSideWidth
-\setlength\cvSideWidth{0.35\paperwidth-\cvMargin}
+\setlength\cvSideWidth{0.32\paperwidth-\cvMargin}
 \newlength\cvMainWidth
 \setlength\cvMainWidth{\paperwidth-4\cvMargin-\cvSideWidth}
 \newlength\cvTimeDotSep
