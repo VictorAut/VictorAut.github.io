@@ -832,6 +832,13 @@
 }{%
 }
 
+\NewDocumentEnvironment{cvProjects}{}{% Victor made
+  % \vspace{\cvSectionSBSep}
+  \vspace{\cvSectionSBSepVictor}
+  \ruleline{Projects}
+}{%
+}
+
 \NewDocumentCommand{\cv@ContactTemplate}{mm}{
   \NewDocumentCommand{#1}{m}{
       \ifcv@contactfirst \\ \else %
@@ -1092,15 +1099,16 @@
     \stepcounter{cv@projectPrevious}
   }
 }
-\NewDocumentEnvironment{cvProjects}{}{%
-  \vspace{\cvSectionSBSep}
-  \ruleline{\pgfkeysvalueof{/@cv/names/projects}}%
-  \vspace{\cvSectionSBSep}
-  \cv@definecvProject
-  \begin{tikzpicture}[every node/.style={inner sep=0cm,outer sep=0cm}]
-}{
-  \end{tikzpicture}
-}
+% \NewDocumentEnvironment{cvProjects}{}{%
+%   % \vspace{\cvSectionSBSep}
+%   \vspace{\cvSectionSBSepVictor}
+%   \ruleline{\pgfkeysvalueof{/@cv/names/projects}}%
+%   \vspace{\cvSectionSBSep}
+%   \cv@definecvProject
+%   \begin{tikzpicture}[every node/.style={inner sep=0cm,outer sep=0cm}]
+% }{
+%   \end{tikzpicture}
+% }
 \newcounter{cv@languages}
 \setcounter{cv@languages}{1}
 \pgfkeys{/@cv/languages/.is family,
