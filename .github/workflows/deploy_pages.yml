@@ -1,0 +1,25 @@
+name: Deploy Pages
+
+on:
+  workflow_dispatch:
+      
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+            persist-credentials: false
+   
+      - name: Git add
+        run: git add build/
+        
+      - name: Deploy to GitHub Pages branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          BRANCH: gh-pages
+          FOLDER: build
+          TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          CLEAN: true
